@@ -6,38 +6,54 @@
     <title>Portfolio | Nova Digitals</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0a0a0b; color: #fdfcfb; font-family: 'Inter', sans-serif; }
+        body { background-color: #050505; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; }
         .gold-text { background: linear-gradient(to right, #d4af37, #fcf6ba, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .image-card { overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); }
     </style>
 </head>
 <body>
-    <nav class="w-full bg-black border-b border-white/5 px-6 py-4 flex justify-between items-center">
-        <div class="text-xl font-bold uppercase"><a href="index.html">Nova <span class="text-[#d4af37]">Digitals</span></a></div>
-        <div class="space-x-6 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+    <nav class="w-full bg-black border-b border-white/5 px-6 py-5 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-[0.2em] uppercase italic"><a href="index.html">Nova <span class="text-[#d4af37]">Digitals</span></a></div>
+        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
-            <a href="work.html" class="text-white">Work</a>
+            <a href="work.html" class="text-white underline underline-offset-8 decoration-[#d4af37]">Work</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
 
-    <section class="pt-24 pb-20 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-serif gold-text italic mb-16 text-center underline underline-offset-8">Our Showcases</h2>
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="mb-20">
+            <h2 class="text-4xl md:text-6xl font-serif italic gold-text mb-4">The Portfolio.</h2>
+            <div class="h-px w-32 bg-[#d4af37]"></div>
+        </div>
+
         <div class="grid md:grid-cols-2 gap-16">
-            <div class="group">
-                <div class="bg-white/5 aspect-video rounded-3xl mb-6 border border-white/10 flex items-center justify-center group-hover:border-[#d4af37]/50 transition">
-                    <span class="text-[10px] tracking-[0.5em] text-gray-600 uppercase">Luxury Stay Project</span>
+            <div class="group cursor-pointer">
+                <div class="image-card rounded-3xl aspect-[16/10] mb-8">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2080&auto=format&fit=crop" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 opacity-80 group-hover:opacity-100" 
+                         alt="Luxury Resort">
                 </div>
-                <h3 class="text-xl font-bold uppercase tracking-widest">The Semien Peak Hotel</h3>
+                <h3 class="text-2xl font-bold tracking-widest uppercase">The Addis Regency</h3>
+                <p class="text-gray-500 italic mt-2 tracking-wide font-light">Global Standard Boutique Experience</p>
             </div>
-            <div class="group">
-                <div class="bg-white/5 aspect-video rounded-3xl mb-6 border border-white/10 flex items-center justify-center group-hover:border-[#d4af37]/50 transition">
-                    <span class="text-[10px] tracking-[0.5em] text-gray-600 uppercase">Urban Boutique Project</span>
+
+            <div class="group cursor-pointer">
+                <div class="image-card rounded-3xl aspect-[16/10] mb-8">
+                    <img src="https://images.unsplash.com/photo-1517840901100-8179e982ad93?q=80&w=2070&auto=format&fit=crop" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 opacity-80 group-hover:opacity-100" 
+                         alt="Business Hotel">
                 </div>
-                <h3 class="text-xl font-bold uppercase tracking-widest">Addis Grand Suites</h3>
+                <h3 class="text-2xl font-bold tracking-widest uppercase">Skyline Business Inn</h3>
+                <p class="text-gray-500 italic mt-2 tracking-wide font-light">Urban Efficiency & Professionalism</p>
             </div>
         </div>
     </section>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600">Built by Nova Digitals • Ethiopia</p>
+    </footer>
 </body>
 </html>
