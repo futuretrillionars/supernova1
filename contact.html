@@ -3,31 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Nova Digitals</title>
+    <title>Contact Us | Nova Digitals</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0a0a0b; color: #fdfcfb; font-family: 'Inter', sans-serif; }
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
         .gold-border { border: 1px solid rgba(212, 175, 55, 0.3); }
+        .contact-image {
+            background: linear-gradient(rgba(5,5,5,0.8), rgba(5,5,5,0.8)), 
+                        url('https://images.unsplash.com/photo-1574950578143-85f030583425?q=80&w=1974&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body>
-    <nav class="w-full bg-black border-b border-white/5 px-6 py-4 flex justify-between items-center">
-        <div class="text-xl font-bold uppercase tracking-widest"><a href="index.html">Nova <span class="text-[#d4af37]">Digitals</span></a></div>
-        <div class="space-x-6 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+    <nav class="w-full bg-black/90 border-b border-white/5 px-6 py-5 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-widest uppercase italic"><a href="index.html">Nova <span class="text-[#d4af37]">Digitals</span></a></div>
+        <div class="space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="work.html">Work</a>
             <a href="about.html">About</a>
-            <a href="contact.html" class="text-white">Contact</a>
+            <a href="contact.html" class="text-white underline underline-offset-8 decoration-[#d4af37]">Contact</a>
         </div>
     </nav>
-    <section class="pt-32 pb-20 px-6 max-w-2xl mx-auto">
-        <div class="gold-border bg-white/5 p-12 rounded-[2rem]">
-            <h2 class="text-2xl font-bold mb-8 text-center uppercase tracking-widest text-[#d4af37]">Request a Luxury Build</h2>
-            <form class="space-y-6">
-                <input type="text" placeholder="Hotel Name" class="w-full bg-transparent border-b border-white/20 p-4 outline-none focus:border-[#d4af37] transition text-white">
-                <button class="w-full bg-[#d4af37] text-black font-black py-4 rounded-full uppercase tracking-widest text-xs transition active:scale-95">Send Inquiry</button>
-            </form>
+
+    <section class="grid md:grid-cols-2 min-h-screen">
+        <div class="contact-image hidden md:block"></div>
+        <div class="flex items-center justify-center p-12 bg-black">
+            <div class="max-w-md w-full">
+                <h2 class="text-4xl font-serif italic text-[#d4af37] mb-4">Let's Talk.</h2>
+                <p class="text-gray-500 mb-10 text-sm tracking-widest uppercase">Consultation for your property</p>
+                
+                <form class="space-y-6">
+                    <input type="text" placeholder="Hotel Name" class="w-full bg-white/5 border-b border-white/20 p-4 outline-none focus:border-[#d4af37] text-white">
+                    <input type="email" placeholder="Email Address" class="w-full bg-white/5 border-b border-white/20 p-4 outline-none focus:border-[#d4af37] text-white">
+                    <textarea placeholder="Message" rows="4" class="w-full bg-white/5 border-b border-white/20 p-4 outline-none focus:border-[#d4af37] text-white"></textarea>
+                    <button class="w-full bg-[#d4af37] text-black font-bold py-4 rounded-full uppercase text-xs tracking-[0.2em] hover:bg-[#fcf6ba] transition">Send Inquiry</button>
+                </form>
+            </div>
         </div>
     </section>
 </body>
