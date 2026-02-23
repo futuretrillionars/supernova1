@@ -6,24 +6,33 @@
     <title>About Us | Nova Digitals</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0a0a0b; color: #fdfcfb; font-family: 'Inter', sans-serif; }
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
         .gold-text { background: linear-gradient(to right, #d4af37, #fcf6ba, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body>
-    <nav class="w-full bg-black border-b border-white/5 px-6 py-4 flex justify-between items-center">
-        <div class="text-xl font-bold uppercase tracking-widest"><a href="index.html">Nova <span class="text-[#d4af37]">Digitals</span></a></div>
-        <div class="space-x-6 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+    <nav class="w-full bg-black/90 border-b border-white/5 px-6 py-5 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-widest uppercase italic"><a href="index.html">Nova <span class="text-[#d4af37]">Digitals</span></a></div>
+        <div class="space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="work.html">Work</a>
-            <a href="about.html" class="text-white">About</a>
+            <a href="about.html" class="text-white underline underline-offset-8 decoration-[#d4af37]">About</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-    <section class="pt-32 pb-20 px-6 max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl font-serif gold-text mb-10">The Bridge to Modernity</h2>
-        <p class="text-gray-400 text-lg leading-relaxed mb-6">Nova Digitals was founded to elevate the digital presence of Ethiopia's tourism industry. We believe your hotel should look world-class.</p>
+
+    <header class="relative h-[400px] overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-40" alt="Modern Architecture">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <h1 class="text-5xl md:text-7xl font-serif italic gold-text">Our Vision</h1>
+        </div>
+    </header>
+
+    <section class="max-w-3xl mx-auto px-6 py-20 text-center">
+        <p class="text-xl text-gray-300 leading-relaxed font-light">
+            Nova Digitals was established to provide the Ethiopian hospitality sector with a digital identity that matches its rich heritage. We believe every hotel in our nation deserves to stand tall on the global stage.
+        </p>
     </section>
 </body>
 </html>
