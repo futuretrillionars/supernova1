@@ -1,59 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Nova Digitals</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; }
-        .gold-text { background: linear-gradient(to right, #d4af37, #fcf6ba, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .image-card { overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Nova Digitals</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background: #050505;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.gold-text {
+    background: linear-gradient(to right, #d4af37, #fcf6ba, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-blur {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.image-card {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.5s ease;
+}
+
+.image-card:hover {
+    border-color: rgba(212,175,55,0.4);
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5,5,5,0.9), transparent 50%);
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+}
+
+.group:hover .image-overlay {
+    opacity: 0.9;
+}
+
+.project-info {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.group:hover .project-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(212,175,55,0.6), transparent);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
 </head>
+
 <body>
-    <nav class="w-full bg-black border-b border-white/5 px-6 py-5 flex justify-between items-center">
-        <div class="text-xl font-bold tracking-[0.2em] uppercase italic"><a href="index.html">Nova <span class="text-[#d4af37]">Digitals</span></a></div>
-        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="work.html" class="text-white underline underline-offset-8 decoration-[#d4af37]">Work</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
 
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <div class="mb-20">
-            <h2 class="text-4xl md:text-6xl font-serif italic gold-text mb-4">The Portfolio.</h2>
-            <div class="h-px w-32 bg-[#d4af37]"></div>
-        </div>
+<nav class="w-full nav-blur px-6 py-5 flex justify-between items-center fixed z-50">
+<div class="text-xl font-bold tracking-[0.25em] uppercase">
+<a href="index.html">NOVA <span class="text-[#d4af37]">DIGITALS</span></a>
+</div>
 
-        <div class="grid md:grid-cols-2 gap-16">
-            <div class="group cursor-pointer">
-                <div class="image-card rounded-3xl aspect-[16/10] mb-8">
-                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2080&auto=format&fit=crop" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 opacity-80 group-hover:opacity-100" 
-                         alt="Luxury Resort">
-                </div>
-                <h3 class="text-2xl font-bold tracking-widest uppercase">The Addis Regency</h3>
-                <p class="text-gray-500 italic mt-2 tracking-wide font-light">Global Standard Boutique Experience</p>
-            </div>
+<div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+<a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+<a href="services.html" class="hover:text-[#d4af37] transition">Services</a>
+<a href="work.html" class="text-white border-b border-[#d4af37]">Work</a>
+<a href="about.html" class="hover:text-[#d4af37] transition">About</a>
+<a href="contact.html" class="hover:text-[#d4af37] transition">Contact</a>
+</div>
+</nav>
 
-            <div class="group cursor-pointer">
-                <div class="image-card rounded-3xl aspect-[16/10] mb-8">
-                    <img src="https://images.unsplash.com/photo-1517840901100-8179e982ad93?q=80&w=2070&auto=format&fit=crop" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 opacity-80 group-hover:opacity-100" 
-                         alt="Business Hotel">
-                </div>
-                <h3 class="text-2xl font-bold tracking-widest uppercase">Skyline Business Inn</h3>
-                <p class="text-gray-500 italic mt-2 tracking-wide font-light">Urban Efficiency & Professionalism</p>
-            </div>
-        </div>
-    </section>
+<section class="max-w-7xl mx-auto px-6 py-40 fade-up">
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600">Built by Nova Digitals • Ethiopia</p>
-    </footer>
+<div class="mb-24">
+<h2 class="text-5xl md:text-6xl font-serif italic gold-text mb-6">
+Selected Work.
+</h2>
+<div class="divider w-40"></div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-20">
+
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="image-card rounded-3xl aspect-[16/10] mb-8 relative">
+
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2080&q=80"
+class="w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+alt="Luxury Resort">
+
+<div class="image-overlay"></div>
+
+<div class="absolute bottom-8 left-8 project-info">
+<h3 class="text-2xl font-bold tracking-widest uppercase">
+The Addis Regency
+</h3>
+<p class="text-gray-300 italic mt-2 text-sm">
+Global Standard Boutique Experience
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- Project 2 -->
+<div class="group cursor-pointer">
+<div class="image-card rounded-3xl aspect-[16/10] mb-8 relative">
+
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2070&q=80"
+class="w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+alt="Business Hotel">
+
+<div class="image-overlay"></div>
+
+<div class="absolute bottom-8 left-8 project-info">
+<h3 class="text-2xl font-bold tracking-widest uppercase">
+Skyline Business Inn
+</h3>
+<p class="text-gray-300 italic mt-2 text-sm">
+Urban Efficiency & Professionalism
+</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer class="py-24 text-center border-t border-white/5">
+<p class="text-[10px] uppercase tracking-[0.6em] text-gray-600">
+Built by Nova Digitals • Ethiopia
+</p>
+</footer>
+
 </body>
 </html>
