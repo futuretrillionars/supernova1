@@ -1,48 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Nova Digitals</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
-        .gold-border { border: 1px solid rgba(212, 175, 55, 0.3); }
-        .contact-image {
-            background: linear-gradient(rgba(5,5,5,0.8), rgba(5,5,5,0.8)), 
-                        url('https://images.unsplash.com/photo-1574950578143-85f030583425?q=80&w=1974&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Nova Digitals</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background: #050505;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.nav-blur {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.gold-text {
+    background: linear-gradient(to right, #d4af37, #fcf6ba, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-image {
+    background:
+    linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)),
+    url('https://images.unsplash.com/photo-1574950578143-85f030583425?auto=format&fit=crop&w=1974&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.glass-input {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+    border-color: rgba(212,175,55,0.6);
+    background: rgba(255,255,255,0.05);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #d4af37, #fcf6ba);
+    color: #000;
+    transition: all 0.4s ease;
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(212,175,55,0.25);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
 </head>
 <body>
-    <nav class="w-full bg-black/90 border-b border-white/5 px-6 py-5 flex justify-between items-center">
-        <div class="text-xl font-bold tracking-widest uppercase italic"><a href="index.html">Nova <span class="text-[#d4af37]">Digitals</span></a></div>
-        <div class="space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="work.html">Work</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" class="text-white underline underline-offset-8 decoration-[#d4af37]">Contact</a>
-        </div>
-    </nav>
 
-    <section class="grid md:grid-cols-2 min-h-screen">
-        <div class="contact-image hidden md:block"></div>
-        <div class="flex items-center justify-center p-12 bg-black">
-            <div class="max-w-md w-full">
-                <h2 class="text-4xl font-serif italic text-[#d4af37] mb-4">Let's Talk.</h2>
-                <p class="text-gray-500 mb-10 text-sm tracking-widest uppercase">Consultation for your property</p>
-                
-                <form class="space-y-6">
-                    <input type="text" placeholder="Hotel Name" class="w-full bg-white/5 border-b border-white/20 p-4 outline-none focus:border-[#d4af37] text-white">
-                    <input type="email" placeholder="Email Address" class="w-full bg-white/5 border-b border-white/20 p-4 outline-none focus:border-[#d4af37] text-white">
-                    <textarea placeholder="Message" rows="4" class="w-full bg-white/5 border-b border-white/20 p-4 outline-none focus:border-[#d4af37] text-white"></textarea>
-                    <button class="w-full bg-[#d4af37] text-black font-bold py-4 rounded-full uppercase text-xs tracking-[0.2em] hover:bg-[#fcf6ba] transition">Send Inquiry</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<nav class="w-full nav-blur px-6 py-5 flex justify-between items-center fixed z-50">
+<div class="text-xl font-bold tracking-[0.25em] uppercase">
+<a href="index.html">NOVA <span class="text-[#d4af37]">DIGITALS</span></a>
+</div>
+
+<div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+<a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+<a href="services.html" class="hover:text-[#d4af37] transition">Services</a>
+<a href="work.html" class="hover:text-[#d4af37] transition">Work</a>
+<a href="about.html" class="hover:text-[#d4af37] transition">About</a>
+<a href="contact.html" class="text-white border-b border-[#d4af37]">Contact</a>
+</div>
+</nav>
+
+<section class="grid md:grid-cols-2 min-h-screen">
+
+<!-- LEFT IMAGE -->
+<div class="contact-image hidden md:block"></div>
+
+<!-- RIGHT FORM -->
+<div class="flex items-center justify-center p-12 bg-black">
+
+<div class="max-w-md w-full fade-up">
+
+<h2 class="text-5xl font-serif italic gold-text mb-6">
+Private Consultation
+</h2>
+
+<p class="text-gray-400 mb-12 text-sm tracking-[0.3em] uppercase">
+For Luxury Hospitality Brands
+</p>
+
+<form class="space-y-6">
+
+<input type="text" placeholder="Hotel Name"
+class="glass-input w-full p-4 rounded-xl outline-none text-white">
+
+<input type="email" placeholder="Email Address"
+class="glass-input w-full p-4 rounded-xl outline-none text-white">
+
+<textarea placeholder="Tell us about your property..."
+rows="4"
+class="glass-input w-full p-4 rounded-xl outline-none text-white"></textarea>
+
+<button
+class="btn-gold w-full py-4 rounded-full uppercase text-xs font-bold tracking-[0.3em]">
+Request Consultation
+</button>
+
+</form>
+
+</div>
+</div>
+
+</section>
+
 </body>
 </html>
