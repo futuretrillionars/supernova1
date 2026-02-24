@@ -4,170 +4,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nova Digitals | Ethiopia's Luxury Hotel Web Systems</title>
-
 <script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&family=Playfair+Display:ital,wght@700&display=swap" rel="stylesheet">
 <style>
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #050505;
-    color: #fff;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    overflow-x: hidden;
-}
-
-/* Cinematic Hero */
-.hero-vignette {
-    background:
-    radial-gradient(circle at 50% 30%, rgba(212,175,55,0.15), transparent 60%),
-    linear-gradient(to bottom, rgba(5,5,5,0.7), rgba(5,5,5,0.95)),
-    url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-}
-
-/* Gold Gradient Text */
-.gold-text {
-    background: linear-gradient(to right, #d4af37, #fcf6ba, #d4af37);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Navbar */
-.nav-blur {
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-/* Button Upgrade */
-.btn-gold {
-    background: linear-gradient(135deg, #d4af37, #fcf6ba);
-    color: #000;
-    transition: all 0.4s ease;
-}
-
-.btn-gold:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(212,175,55,0.25);
-}
-
-/* Smooth Fade Animation */
-.fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Subtle Luxury Divider */
-.divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(212,175,55,0.5), transparent);
-}
-
-/* Glow Orb */
-.glow-orb {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(212,175,55,0.08), transparent 70%);
-    top: -150px;
-    right: -150px;
-    pointer-events: none;
-}
+  body { background-color: #050505; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; margin:0; overflow-x:hidden; }
+  .gold-text { background: linear-gradient(to right,#d4af37,#fcf6ba,#d4af37); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero-vignette { background: linear-gradient(to bottom, rgba(5,5,5,0.6) 0%, rgba(5,5,5,0.95) 100%), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop'); background-size:cover; background-position:center; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 1.5rem; }
+  .nav-blur { background: rgba(0,0,0,0.85); backdrop-filter: blur(20px); border-bottom:1px solid rgba(255,255,255,0.05); }
+  .btn-gold { background: #d4af37; color:#000; transition: all 0.4s ease; padding:1.25rem 3rem; border-radius:2rem; font-weight:800; text-transform:uppercase; letter-spacing:0.2em; display:inline-block; }
+  .btn-gold:hover { background:#fcf6ba; transform:translateY(-3px); box-shadow:0 10px 25px rgba(212,175,55,0.3); }
+  .fade-up { opacity:0; transform: translateY(40px); transition: all 0.8s ease-out; }
+  .fade-up.visible { opacity:1; transform: translateY(0); }
 </style>
 </head>
-
 <body>
 
-<nav class="fixed w-full z-50 nav-blur px-6 py-5">
-<div class="max-w-7xl mx-auto flex justify-between items-center">
-<div class="text-xl font-bold tracking-[0.25em] uppercase">
-NOVA <span class="text-[#d4af37]">DIGITALS</span>
-</div>
+<!-- Navbar -->
+<nav class="w-full fixed z-50 nav-blur px-6 py-5 flex justify-between items-center">
+  <div class="text-xl font-bold tracking-[0.25em] uppercase"><a href="index.html">NOVA <span class="text-[#d4af37]">DIGITALS</span></a></div>
 
-<div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
-<a href="index.html" class="text-white border-b border-[#d4af37]">Home</a>
-<a href="services.html" class="hover:text-[#d4af37] transition">Services</a>
-<a href="work.html" class="hover:text-[#d4af37] transition">Work</a>
-<a href="about.html" class="hover:text-[#d4af37] transition">About</a>
-<a href="contact.html" class="hover:text-[#d4af37] transition">Contact</a>
-</div>
-</div>
+  <!-- Desktop Links -->
+  <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+    <a href="index.html" class="text-white border-b border-[#d4af37]">Home</a>
+    <a href="services.html" class="hover:text-[#d4af37] transition">Services</a>
+    <a href="work.html" class="hover:text-[#d4af37] transition">Work</a>
+    <a href="about.html" class="hover:text-[#d4af37] transition">About</a>
+    <a href="contact.html" class="hover:text-[#d4af37] transition">Contact</a>
+  </div>
+
+  <!-- Mobile Hamburger -->
+  <div class="md:hidden relative">
+    <button id="menu-btn" class="focus:outline-none">
+      <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="absolute right-0 mt-2 w-48 bg-black/95 border border-white/10 rounded-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300">
+      <a href="index.html" class="block px-6 py-3 text-sm uppercase text-white border-b border-[#d4af37]">Home</a>
+      <a href="services.html" class="block px-6 py-3 text-sm uppercase text-gray-400 hover:text-[#d4af37] transition">Services</a>
+      <a href="work.html" class="block px-6 py-3 text-sm uppercase text-gray-400 hover:text-[#d4af37] transition">Work</a>
+      <a href="about.html" class="block px-6 py-3 text-sm uppercase text-gray-400 hover:text-[#d4af37] transition">About</a>
+      <a href="contact.html" class="block px-6 py-3 text-sm uppercase text-gray-400 hover:text-[#d4af37] transition">Contact</a>
+    </div>
+  </div>
 </nav>
 
-<header class="hero-vignette flex items-center justify-center px-6 text-center relative">
-<div class="glow-orb"></div>
-
-<div class="max-w-5xl fade-up">
-<span class="text-[#d4af37] font-bold tracking-[0.6em] uppercase text-[10px] mb-6 block">
-Elite Web Systems • Ethiopia
-</span>
-
-<h1 class="text-5xl md:text-8xl font-extrabold mb-8 leading-[1.05] tracking-tight">
-Global Standards. <br>
-<span class="gold-text italic font-serif">Ethiopian Soul.</span>
-</h1>
-
-<p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-We architect digital prestige for Ethiopia’s finest hotels —
-designed to compete with Dubai, London, and beyond.
-</p>
-
-<div class="flex flex-col md:flex-row justify-center gap-6">
-<a href="work.html" class="btn-gold px-12 py-5 rounded-full uppercase text-xs font-black tracking-widest">
-View Portfolio
-</a>
-<a href="contact.html" class="border border-white/20 px-12 py-5 rounded-full uppercase text-xs font-bold tracking-widest hover:bg-white/5 transition">
-Start a Project
-</a>
-</div>
-</div>
+<!-- Hero -->
+<header class="hero-vignette fade-up">
+  <div class="max-w-5xl">
+    <span class="text-[#d4af37] font-bold tracking-[0.5em] uppercase text-[10px] mb-6 block">Elite Web Systems • Ethiopia</span>
+    <h1 class="text-5xl md:text-8xl font-extrabold mb-8 leading-[1.1] tracking-tighter">
+      Global Standards. <br>
+      <span class="gold-text" style="font-family:'Playfair Display', serif; font-style:italic;">Ethiopian Soul.</span>
+    </h1>
+    <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light tracking-wide leading-relaxed">
+      We transform Ethiopian hospitality through world-class digital prestige. Build a presence that commands respect from local guests and international travelers alike.
+    </p>
+    <div class="flex flex-col md:flex-row justify-center gap-6">
+      <a href="work.html" class="btn-gold">View Portfolio</a>
+      <a href="contact.html" class="border border-white/20 px-12 py-5 rounded-full uppercase text-xs font-bold tracking-widest hover:bg-white/5 transition">Start a Project</a>
+    </div>
+  </div>
 </header>
 
-<section class="py-16 bg-black">
-<div class="divider mb-16"></div>
-
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center">
-
-<div>
-<h3 class="text-3xl font-bold gold-text">100%</h3>
-<p class="text-gray-400 text-sm tracking-widest uppercase mt-2">Luxury Focused</p>
-</div>
-
-<div>
-<h3 class="text-3xl font-bold gold-text">Mobile</h3>
-<p class="text-gray-400 text-sm tracking-widest uppercase mt-2">Optimized</p>
-</div>
-
-<div>
-<h3 class="text-3xl font-bold gold-text">Global</h3>
-<p class="text-gray-400 text-sm tracking-widest uppercase mt-2">SEO Strategy</p>
-</div>
-
-<div>
-<h3 class="text-3xl font-bold gold-text">Local</h3>
-<p class="text-gray-400 text-sm tracking-widest uppercase mt-2">Payment Systems</p>
-</div>
-
-</div>
-
-<div class="divider mt-16"></div>
+<!-- Services teaser -->
+<section class="py-12 bg-black border-y border-white/5">
+  <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-50 grayscale fade-up">
+    <span class="text-xs font-bold tracking-widest">LUXURY DESIGN</span>
+    <span class="text-xs font-bold tracking-widest">MOBILE OPTIMIZED</span>
+    <span class="text-xs font-bold tracking-widest">GLOBAL SEO</span>
+    <span class="text-xs font-bold tracking-widest">LOCAL PAYMENTS</span>
+  </div>
 </section>
+
+<script>
+// Mobile menu toggle
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('mobile-menu');
+let open = false;
+btn.addEventListener('click', () => {
+    open = !open;
+    if(open){
+        menu.classList.remove('opacity-0','pointer-events-none','translate-y-[-10px]');
+        menu.classList.add('opacity-100','pointer-events-auto','translate-y-0');
+    } else {
+        menu.classList.add('opacity-0','pointer-events-none','translate-y-[-10px]');
+        menu.classList.remove('opacity-100','pointer-events-auto','translate-y-0');
+    }
+});
+
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade-up');
+const appearOptions = { threshold:0.2, rootMargin:"0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
 
 </body>
 </html>
