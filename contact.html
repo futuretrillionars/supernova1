@@ -38,17 +38,19 @@ body { background: #050505; color: #fff; font-family: 'Plus Jakarta Sans', sans-
   <!-- Image -->
   <div class="contact-image w-full h-64 md:h-auto"></div>
 
-  <!-- Form -->
-  <div class="flex items-center justify-center p-12 bg-black">
-    <div class="max-w-md w-full fade-up">
-      <h2 class="text-5xl font-serif italic gold-text mb-6 text-center md:text-left">Private Consultation</h2>
-      <p class="text-gray-400 mb-12 text-sm tracking-[0.3em] uppercase text-center md:text-left">For Luxury Hospitality Brands</p>
-      <form class="space-y-6">
-        <input type="text" placeholder="Hotel Name" class="glass-input">
-        <input type="email" placeholder="Email Address" class="glass-input">
-        <textarea placeholder="Tell us about your property..." rows="4" class="glass-input"></textarea>
-        <button type="submit" class="btn-gold">Request Consultation</button>
-      </form>
+<form action="https://formspree.io/f/mdapdoqd" method="POST" class="space-y-6">
+
+  <input type="text" name="hotel" placeholder="Hotel Name" class="glass-input" required>
+
+  <input type="email" name="email" placeholder="Email Address" class="glass-input" required>
+
+  <textarea name="message" placeholder="Tell us about your property..." rows="4" class="glass-input" required></textarea>
+
+  <input type="hidden" name="_subject" value="New Consultation Request">
+
+  <button type="submit" class="btn-gold">Request Consultation</button>
+
+</form>
     </div>
   </div>
 
